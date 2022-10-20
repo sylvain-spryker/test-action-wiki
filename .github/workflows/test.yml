@@ -24,4 +24,4 @@ jobs:
             git config --global user.name "Action test" \
             git add test.md \
             git commit -m "Update test.md at $(date)" \
-            git push origin main \
+            git push origin master \
