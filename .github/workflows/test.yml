@@ -19,12 +19,12 @@ jobs:
           path: 'test-action-wiki.wiki'
       - name: Update summary.md if needed
         run: |
-          ls -la \
-          echo "test $(date)" > test-action-wiki.wiki/test.md && \
-          cat test-action-wiki.wiki/test.md \
-          cd test-action-wiki.wiki/ \
-          git config --global user.email "test@spryker.com" && \
-          git config --global user.name "Action test" && \
-          git add test.md && \
-          git commit -m "Update test.md at $(date)" && \
-          git push origin master
+          ls -la
+#          echo "test $(date)" > test-action-wiki.wiki/test.md && \
+#          cat test-action-wiki.wiki/test.md \
+#          cd test-action-wiki.wiki/ \
+#          git config --global user.email "test@spryker.com" && \
+#          git config --global user.name "Action test" && \
+#          git add test.md && \
+#          git commit -m "Update test.md at $(date)" && \
+#          git push origin master
