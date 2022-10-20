@@ -19,9 +19,9 @@ jobs:
           path: 'test-action-wiki.wiki'
       - name: Update summary.md if needed
         run: |
-          echo "test $(date)" > $GITHUB_WORKSPACE/test-action-wiki.wiki/test.md \
-          git config --global user.email "test@spryker.com" \
-            git config --global user.name "Action test" \
-            git add test.md \
-            git commit -m "Update test.md at $(date)" \
-            git push origin master \
+          echo "test $(date)" > $GITHUB_WORKSPACE/test-action-wiki.wiki/test.md && \
+          git config --global user.email "test@spryker.com" && \
+            git config --global user.name "Action test" && \
+            git add test.md && \
+            git commit -m "Update test.md at $(date)" && \
+            git push origin master && \
