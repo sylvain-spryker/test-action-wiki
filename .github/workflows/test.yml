@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: 'sylvain-spryker/test-action-wiki.wiki'
-          ref: 'main'
+          ref: 'master'
           path: 'test-action-wiki.wiki'
       - name: Update summary.md if needed
         run: |
