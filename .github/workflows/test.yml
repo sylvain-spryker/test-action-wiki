@@ -7,21 +7,21 @@ on:
 
 jobs:
   create-wiki-summary:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Check out repo
-      uses: actions/checkout@v2
-    - name: Check out wiki
-      uses: actions/checkout@v2
-      with:
-        repository: 'sylvain-spryker/test-action-wiki.wiki'
-        ref: 'main'
-        path: 'test-action-wiki.wiki'
-    - name: Update summary.md if needed
-      run: |
-        echo "test $(date)" > $GITHUB_WORKSPACE/my-repo.wiki/test.md \
-        git config --global user.email "test@spryker.com" \
-          git config --global user.name "Action test" \
-          git add test.md \
-          git commit -m "Update test.md at $(date)" \
-          git push origin main \
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v2
+      - name: Check out wiki
+        uses: actions/checkout@v2
+        with:
+          repository: 'sylvain-spryker/test-action-wiki.wiki'
+          ref: 'main'
+          path: 'test-action-wiki.wiki'
+      - name: Update summary.md if needed
+        run: |
+          echo "test $(date)" > $GITHUB_WORKSPACE/my-repo.wiki/test.md \
+          git config --global user.email "test@spryker.com" \
+            git config --global user.name "Action test" \
+            git add test.md \
+            git commit -m "Update test.md at $(date)" \
+            git push origin main \
