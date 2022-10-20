@@ -20,7 +20,7 @@ jobs:
       - name: Update summary.md if needed
         run: |
           echo "test $(date)" > $GITHUB_WORKSPACE/test-action-wiki.wiki/test.md && \
-          cd $GITHUB_WORKSPACE/test-action-wiki.wiki/ \
+          cd "$GITHUB_WORKSPACE/test-action-wiki.wiki/" \
           git config --global user.email "test@spryker.com" && \
           git config --global user.name "Action test" && \
           git add test.md && \
