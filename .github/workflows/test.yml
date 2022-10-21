@@ -18,9 +18,11 @@ jobs:
       - name: Update summary.md if needed
         run: |
           cd ./test-action-wiki.wiki && \
-          echo "test $(date)\n# output internal \n\`\`\`\n" > test.md
-          cat ../output.out | tee -a test.md && \
-          echo "\n\`\`\`\n" | tee -a test.md && \
+          echo "test $(date)" > test.md
+          echo "# output internal" >> test.md
+          echo "\`\`\`" >> test.md
+          cat ../output.out >> test.md && \
+          echo "\`\`\`" >> test.md && \
           git config --global user.email "test@spryker.com" && \
           git config --global user.name "Action test" && \
           git add test.md && \
