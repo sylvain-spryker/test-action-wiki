@@ -17,6 +17,7 @@ jobs:
           path: 'test-action-wiki.wiki'
       - name: Update summary.md if needed
         run: |
+          ls
           cd ./test-action-wiki.wiki && \
           echo "test $(date)\n# output internal \n```\n" | tee test.md && \
           cat ../output.out | tee -a test.md && \
