@@ -22,6 +22,7 @@ jobs:
           echo "# output internal" >> test.md
           echo "\`\`\`" >> test.md
           cat ../output.out >> test.md && \
+          echo "" >> test.md && \
           echo "\`\`\`" >> test.md && \
           git config --global user.email "test@spryker.com" && \
           git config --global user.name "Action test" && \
