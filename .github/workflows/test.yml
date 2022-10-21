@@ -17,9 +17,10 @@ jobs:
           path: 'test-action-wiki.wiki'
       - name: Update summary.md if needed
         run: |
-          ls
+          ls && \
           cd ./test-action-wiki.wiki && \
           echo "test $(date)\n# output internal \n```\n" | tee test.md && \
+          cat ../output.out && \
           cat ../output.out | tee -a test.md && \
           echo "```\n" | tee -a test.md && \
           git config --global user.email "test@spryker.com" && \
