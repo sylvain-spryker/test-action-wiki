@@ -1,0 +1,30 @@
+some_permalink1 = "https://some.url/1233432423"
+some_permalink2 = "https://some.url/uhfewiufhewiuhriewu"
+some_permalink3 = "https://some.url/kjfdiewuhfe997ref"
+
+ some_settings = {
+  "somethin.json" = {
+    "critical" = {
+      "operator" = "above"
+      "threshold" = 0
+      "threshold_duration" = 3
+      "threshold_occurrences" = "all"
+    }
+    "description" = "something."
+    "enabled" = true
+    "name" = "something"
+    "query" = "SELECT count(*) FROM something WHERE result != 'SUCCESS'"
+  }
+  "something.json" = {
+    "critical" = {
+      "operator" = "above"
+      "threshold" = 0
+      "threshold_duration" = 3
+      "threshold_occurrences" = "at_least_once"
+    }
+    "description" = "sonething"
+    "enabled" = true
+    "name" = "Ping something"
+    "query" = "SELECT count(*) FROM somthing FACET something WHERE result != 'SUCCESS'"
+  }
+}
