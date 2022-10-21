@@ -19,8 +19,9 @@ jobs:
         run: |
           ls && \
           cd ./test-action-wiki.wiki && \
-          cat ../output.out
-#          echo "test $(date)\n# output internal \n```\n" | tee test.md && \
+          cat ../output.out && \
+          echo "test $(date)\n# output internal \n```\n" > test.md
+          cat test.md
 #          cat ../output.out | tee -a test.md && \
 #          echo "```\n" | tee -a test.md && \
 #          git config --global user.email "test@spryker.com" && \
