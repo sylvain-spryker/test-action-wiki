@@ -19,12 +19,12 @@ jobs:
         run: |
           ls && \
           cd ./test-action-wiki.wiki && \
-          echo "test $(date)\n# output internal \n```\n" | tee test.md && \
-          cat ../output.out && \
-          cat ../output.out | tee -a test.md && \
-          echo "```\n" | tee -a test.md && \
-          git config --global user.email "test@spryker.com" && \
-          git config --global user.name "Action test" && \
-          git add test.md && \
-          git commit -m "Update test.md at $(date)" && \
-          git push origin master
+#          echo "test $(date)\n# output internal \n```\n" | tee test.md && \
+          cat ../output.out
+#          cat ../output.out | tee -a test.md && \
+#          echo "```\n" | tee -a test.md && \
+#          git config --global user.email "test@spryker.com" && \
+#          git config --global user.name "Action test" && \
+#          git add test.md && \
+#          git commit -m "Update test.md at $(date)" && \
+#          git push origin master
